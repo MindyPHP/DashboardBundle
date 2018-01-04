@@ -1,6 +1,12 @@
 {
     "name": "mindy/dashboard-bundle",
     "license": "MIT",
+    "config": {
+        "preferred-install": {
+            "*": "dist"
+        },
+        "sort-packages": true
+    },
     "autoload": {
         "psr-4": {
             "Mindy\\Bundle\\DashboardBundle\\": ""
@@ -10,7 +16,8 @@
         ]
     },
     "require": {
-        "php": ">=5.5.9"
+        "php": ">=7.0",
+        "mindy/template-bundle": ">=4.0.5"
     },
     "authors": [
         {
@@ -19,10 +26,8 @@
             "homepage": "http://studio107.ru"
         }
     ],
-    "minimum-stability": "dev",
-    "extra": {
-        "branch-alias": {
-            "dev-master": "3.6.8-dev"
-        }
+    "require-dev": {
+        "phpunit/phpunit": "^6.5",
+        "symfony/framework-bundle": "~3.0|~4.0"
     }
 }

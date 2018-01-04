@@ -1,16 +1,18 @@
 <?php
 
+declare(strict_types=1);
+
 /*
- * (c) Studio107 <mail@studio107.ru> http://studio107.ru
- * For the full copyright and license information, please view
- * the LICENSE file that was distributed with this source code.
+ * This file is part of Mindy Framework.
+ * (c) 2018 Maxim Falaleev
  *
- * Author: Maxim Falaleev <max@studio107.ru>
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
  */
 
 namespace Mindy\Bundle\DashboardBundle\Dashboard;
 
-use Mindy\Template\Renderer;
+use Mindy\Template\TemplateEngine;
 
 class Dashboard
 {
@@ -20,16 +22,16 @@ class Dashboard
     protected $widgets = [];
 
     /**
-     * @var Renderer
+     * @var TemplateEngine
      */
     protected $template;
 
     /**
      * Dashboard constructor.
      *
-     * @param Renderer $template
+     * @param TemplateEngine $template
      */
-    public function __construct(Renderer $template)
+    public function __construct(TemplateEngine $template)
     {
         $this->template = $template;
     }
